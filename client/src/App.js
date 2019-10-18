@@ -1,24 +1,44 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import {
+  Container,
+  Navbar,
+  NavbarBrand,
+  Row,
+  Jumbotron,
+  InputGroup,
+  InputGroupAddon,
+  Button,
+  FormGroup,
+  Input,
+  Col
+} from "reactstrap";
+
+import MovieQuotes from "./MovieQuotes";
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          StoleMyLine
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
+      <Container fluid className="centered">
+        <Navbar dark color="dark">
+          <NavbarBrand href="/">Stole My Line</NavbarBrand>
+        </Navbar>
+        <Row>
+          <Col></Col>
+        </Row>
+        <Row>
+          <Col></Col>
+        </Row>
+        <MovieQuotes/>
+      </Container>
+
     </div>
   );
 }
