@@ -2,7 +2,7 @@ const db = require('../database');
 
 class Quotes {
     static retrieveAll(callback) {
-        db.query('SELECT * from Quotes', (err, res) => {
+        db.query('SELECT movies.movie_title, quotes.body_text FROM quotes,movies WHERE quotes.movie_id = movies.movie_id ORDER BY RANDOM() LIMIT 1', (err, res) => {
             if (err.error)
                 return callback(err);
             callback(res);

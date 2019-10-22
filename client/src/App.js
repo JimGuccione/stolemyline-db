@@ -1,46 +1,24 @@
-import React from 'react';
+import React, {Component} from 'react';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
+import Home from './components/home';
+import Navbar from './components/customNavbar';
+import MovieQuotes from './MovieQuotes';
 
-import {
-  Container,
-  Navbar,
-  NavbarBrand,
-  Row,
-  Jumbotron,
-  InputGroup,
-  InputGroupAddon,
-  Button,
-  FormGroup,
-  Input,
-  Col
-} from "reactstrap";
+class App extends Component {
+    render() {
+        return (
+            <div>
+                <Router>
+                    <div>
+                        <Navbar />
+                        <Route exact path="/" component={Home} />
+                        <Route path="/MovieQuotes" component={MovieQuotes} />
 
-import MovieQuotes from "./MovieQuotes";
-
-import './App.css';
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          StoleMyLine
-        </p>
-      </header>
-      <Container fluid className="centered">
-        <Navbar dark color="dark">
-          <NavbarBrand href="/">Stole My Line</NavbarBrand>
-        </Navbar>
-        <Row>
-          <Col></Col>
-        </Row>
-        <Row>
-          <Col></Col>
-        </Row>
-        <MovieQuotes/>
-      </Container>
-
-    </div>
-  );
+                    </div>
+                </Router>
+            </div>
+        );
+    }
 }
 
 export default App;

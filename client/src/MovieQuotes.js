@@ -1,24 +1,49 @@
-import React from "react";
-import {Row, Col, Table} from "reactstrap";
+import React, {Component} from 'react';
 
-const MovieQuotes = (props) => {
-    const{data} = props;
+class MovieQuotes extends Component {
 
-    if (!data)
-        return<div></div>;
+    constructor(props) {
+        super(props);
+        this.state={
+            quote:'blah'
+        }
+    }
 
-    return(
-        <Row className="MovieQuotes">
-            <Col sm="12" md= {{ size: 4, offset: 4 }}>
-                <h2>What!</h2>
-                <img/>
-                <span></span>
-                <span></span>
-                <Table>
-                    <tbody></tbody>
-                </Table>
-            </Col>
-        </Row>
-        );
+    getQuote = async () => {
+        const res= await fetch('http://localhost:5000/quotes');
+        const json = await res.json();
+        console.log(json[0]);
+        this.setState({quote:json[0].body_text});
+        // const p0=fetch('http://localhost:5000/quotes');
+      // const p1=p0.then((res)=>{
+      //     return res.json();
+      // });
+      // p1.then((json)=>{
+      //     console.log(json);
+      //     this.setState({quote:json[0].body_text})
+      // });
+      //console.log("get")
     };
-    export default MovieQuotes;
+
+
+    componentDidMount() {
+        (async () => {
+            try {
+                await this.getQuote();
+            } catch (err) {
+                console.error(err)
+            }
+        })();
+    }
+
+    render() {
+        const quote=this.state.quote;
+        return (
+            <div>
+                {quote}
+            </div>
+        );
+    }
+}
+
+export default MovieQuotes;
