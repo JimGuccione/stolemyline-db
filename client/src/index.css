@@ -5,9 +5,186 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.navContainer {
+  width: 100%;
+  background-color: darkslategray;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  align-content: space-between;
+  font-family: Copperplate, serif;
+  padding-left: 30px;
+  height:100px;
+}
+
+.myNavbar{
+  padding-left: 30px;
+  width:100%;
+  background-color: darkslategray;
+  position: fixed;
+}
+
+
+
+.question {
+  padding-top: 60px;
+  height: 100px;
+  font-family: Copperplate, serif;
+  font-size: x-large;
+  padding-left: 40px;
+  color: whitesmoke;
+  background-color: darkslategray;
+
+}
+
+
+.movieLine{
+  color: midnightblue;
+  border: 5px solid goldenrod;
+  border-radius: 55px;
+  background-color: white;
+  font-size: 30px;
+  font-weight: bold;
+  display: inline-block;
+  width: 100%;
+  height: 320px;
+  justify-items: flex-start;
+  padding-top: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+  font-family: "American Typewriter";
+}
+
+.movieTitle{
+  color:black;
+  background-color: black;
+  font-size: 60px;
+  width: 100%;
+  justify-items: flex-start;
+  padding-left: 40px;
+  border-color: green;
+  font-family: Copperplate;
+
+}
+
+.movieTitle:active{
+  color:whitesmoke;
+  font-size: 60px;
+  width: 100%;
+  justify-items: flex-start;
+  padding-left: 40px;
+  border-color: blue;
+
+}
+
+.welcome{
+  font-family: Copperplate, serif;
+  font-size: xx-large;
+  background-color: chocolate;
+  height: 120px;
+  padding-top: 20px;
+  padding-left: 80px;
+}
+
+.construction{
+  height: 800px;
+  background-color: red;
+  padding-top: 60px;
+  padding-left: 80px;
+}
+
+.newArea{
+  padding-left: 50%;
+  height:220px;
+  padding-top: 30px;
+  background-color: black;
+}
+
+.startButton{
+  padding-left: 90px;
+  padding-top: 10px;
+  height: 90px;
+}
+
+.smlLogo{
+  padding-left: 60%;
+  padding-top: 120px;
+}
+
+.allOfIt{
+  background-color: whitesmoke;
+  height: 900px;
+}
+
+.footerContainer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  height: 130px;
+}
+.footerLinks{
+  display: flex;
+  justify-content: space-evenly;
+  padding-top:20px;
+  color: blue;
+  font-weight: bolder;
+  font-size: large;
+}
+
+.hooter {
+  background-color: red;
+}
+
+.tryAgain{
+  background-color: midnightblue;
+  padding-top: 30px;
+  padding-left: 45%;
+  height:130px;
+}
+
+.neo{
+  height: 300px;
+}
+
+.movieArray{
+  height: 800px;
+}
+
+.level_id{
+  height: 60px;
+  padding-left: 80px;
+  background-color: midnightblue;
+  font-family: Copperplate, serif;
+  color: whitesmoke;
+}
+
+.score{
+  width:100%;
+  color:whitesmoke;
+  column-width: auto;
+  row-gap: 20px;
+  padding-left: 15%;
+  align-items: center;
+  border-radius: 35px;
+}
+
+.col-5 {
+  display: flex;
+  justify-content: center;
+}
+
+.scoreRowOne{
+  width: 100%
+}
+
+.answerSection {
+  height:200px;
 }

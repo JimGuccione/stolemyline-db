@@ -1,0 +1,34 @@
+.gameContain{
+    padding-top: 200px;
+}
+
+.gridView {
+    padding-top: 200px;
+}
+
+.gridContainer{
+    padding-top: 100px;
+    color:blue;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: darkblue;
+    height: 800px;
+}
+
+.paper{
+    padding-left: 20px;
+    padding-right: 10px;
+    height: 200px;
+    font-size: xx-large;
+    background-color: green;
+}
+
+.MuiGrid-item {
+    background-color: black;
+    font-family: Copperplate, serif;
+}
+
+.MuiPaper-root {
+    background-color: antiquewhite !important;
+}
+
