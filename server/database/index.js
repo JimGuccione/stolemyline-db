@@ -3,7 +3,6 @@ const { Pool } = require("pg");
 const CONNECTION_STRING = process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5434/stolemyline-db';
 const SSL = process.env.NODE_ENV === 'production';
 
-
 class Database {
     constructor() {
         this._pool = new Pool({
@@ -15,7 +14,6 @@ class Database {
             console.error('Unexpected error on idle PostgreSQL client.', err);
             process.exit(-1);
         });
-
     }
 
     query(query, ...args){
@@ -33,7 +31,6 @@ class Database {
                 callback({}, res.rows);
             });
         });
-        
     }
 
     end(){

@@ -1,4 +1,3 @@
-const path = require('path');
 const express = require ('express');
 const bodyParser = require ('body-parser');
 const cors = require ('cors');
@@ -14,7 +13,8 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use (bodyParser.json());
 
-app.use('/quotes', require('./api/quotes'));
+// app.use('/quotes', require('./api/quotes'));
+app.use('/games', require('./api/games'));
 
 app.listen(PORT, () => {
     console.log(`Server Listening on port ${PORT}...`);

@@ -15,11 +15,15 @@ class BasicGrid extends Component {
     getQuote = async () => {
         const res = await fetch('http://localhost:5000/quotes');
         const json = await res.json();
-        console.log(json[0]);
-        this.setState({movie: json[0].movie_title});
-        this.setState({quote: json[0].body_text});
-        this.setState({level: json[0].level_id});
+        for (let i=0;i<json.length;i++){
+            this.setState({movie: json[i].movie_title});
+            this.setState({quote: json[i].body_text});
+            this.setState({level: json[i].level_id});
+
+            console.log(json[i]);
+        }
     };
+
 
     componentDidMount() {
         (async () => {

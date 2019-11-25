@@ -32,7 +32,7 @@ class LandingPage extends Component {
                                 <Col>
                                 </Col>
                                 <Col>
-                                <Button href="../Quotes">PLAY</Button>
+                                <Button href="../Games">PLAY</Button>
                                 </Col>
                             </Row>
                             <Row>
