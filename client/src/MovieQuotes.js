@@ -39,7 +39,7 @@ const MovieQuotes= ({gameId=-1}) =>{
                         <h2>Point Value</h2>
                     </Col>
                     <Col>
-                        <h1> {movieQuote.level_id}</h1>
+                        <h1> {movieQuote.points}</h1>
                     </Col>
                 </Row>
             </div>
@@ -54,7 +54,7 @@ const MovieQuotes= ({gameId=-1}) =>{
 
             </div>
             <div>
-                <Footer/>
+                <Footer quoteIndex={quoteIndex} points={movieQuote.points} />
             </div>
 
         </div>

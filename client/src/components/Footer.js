@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
-import Scoreboard from './Scoreboard';
+import ChallengeScoreboard from './ChallengeScoreboard';
 
 class Footer extends Component {
     render() {
         return (
             <div className='footerContainer'>
 
-                    <Scoreboard />
+                    <ChallengeScoreboard quoteIndex={this.props.quoteIndex} points={this.props.points}/>
 
 
                 </div>
