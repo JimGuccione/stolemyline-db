@@ -11,11 +11,10 @@ const MovieQuotes= ({gameId=-1}) =>{
         const res = await fetch('http://localhost:5000/Games');
         const movieQuotes = await res.json();
         setQuotes(movieQuotes);
-        setQuoteIndex(0)
+        setQuoteIndex(0);
     },[gameId]);
 
-    const handleNextQuote=(e) => {
-        e.preventDefault()
+    const handleNextQuote=() => {
         setQuoteIndex(quoteIndex+1)
     }
     const movieQuote=quotes[quoteIndex] || {};
@@ -47,14 +46,14 @@ const MovieQuotes= ({gameId=-1}) =>{
                 {movieQuote.movie_title}
             </div>
 
-            <div className='tryAgain'>
+            {/*<div className='tryAgain'>*/}
 
-                <button onClick={handleNextQuote}>Next Question</button>
+                {/*<button onClick={handleNextQuote}>Next Question</button>*/}
 
 
-            </div>
+            {/*</div>*/}
             <div>
-                <Footer quoteIndex={quoteIndex} points={movieQuote.points} />
+                <Footer quoteIndex={quoteIndex} points={movieQuote.points} handleNextQuote={handleNextQuote}/>
             </div>
 
         </div>

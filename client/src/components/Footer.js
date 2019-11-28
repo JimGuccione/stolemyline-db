@@ -6,7 +6,7 @@ class Footer extends Component {
         return (
             <div className='footerContainer'>
 
-                    <ChallengeScoreboard quoteIndex={this.props.quoteIndex} points={this.props.points}/>
+                    <ChallengeScoreboard quoteIndex={this.props.quoteIndex} points={this.props.points} handleNextQuote={this.props.handleNextQuote}/>
 
 
                 </div>

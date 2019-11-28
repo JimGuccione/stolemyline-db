@@ -7,9 +7,7 @@ import Character from './components/Character';
 import MovieQuotes from './MovieQuotes';
 import LandingPage from './components/LandingPage';
 import Games from './Games';
-// import BasicGrid from './components/BasicGrid';
-// import Footer from './components/Footer';
-// import Answer from './components/Answer';
+
 import '../src/index.css'
 
 
